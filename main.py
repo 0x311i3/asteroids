@@ -1,6 +1,5 @@
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 import pygame
-
 from player import Player
 
 def main():
@@ -12,6 +11,8 @@ def main():
     fps = pygame.time.Clock()
     dt = 0
     player = Player((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2))
+
+    # game loop
     while pygame.get_init():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
