@@ -3,6 +3,7 @@ from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 import pygame
 from player import Player
 from shot import Shot
+import sys
 from asteroid import Asteroid
 
 
@@ -41,7 +42,7 @@ def main():
         for obj in asteroids:
             if obj.collision(player):
                 print("Game over!")
-                exit()
+                sys.exit()
 
             for bullet in shots:
                 if obj.collision(bullet):
