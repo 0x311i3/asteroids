@@ -18,7 +18,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
-        # refresh player state
+        # refresh player state / movement
         player.update(dt)
 
         # fill bg, draw player, refresh screen
