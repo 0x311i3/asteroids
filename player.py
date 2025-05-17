@@ -47,6 +47,7 @@ class Player(CircleShape):
             else:
                 self.shoot()
         if keys[pygame.K_LCTRL] and keys[pygame.K_c]:
+            print("Keyboard interrupt received. Goodbye!")
             exit()
 
     def shoot(self):
