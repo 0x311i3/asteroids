@@ -2,6 +2,7 @@ import pygame
 from circleshape import CircleShape
 from shot import Shot
 from constants import PLAYER_RADIUS, PLAYER_SHOOT_COOLDOWN, PLAYER_SHOOT_SPEED, PLAYER_SPEED, PLAYER_TURN_SPEED
+from sys import exit
 
 class Player(CircleShape):
     timer = 0
@@ -45,6 +46,8 @@ class Player(CircleShape):
                 pass
             else:
                 self.shoot()
+        if keys[pygame.K_LCTRL] and keys[pygame.K_c]:
+            exit()
 
     def shoot(self):
         shot = Shot(self.position.x, self.position.y)
